@@ -6,7 +6,7 @@ import Home from './components/Home';
 
 function App() {
   useEffect(() => {
-    document.title = 'PremierZone Fantasy';
+    document.title = 'StudySmartBot';
   }, []);
 
   return (

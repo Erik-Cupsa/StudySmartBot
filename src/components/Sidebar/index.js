@@ -2,7 +2,7 @@ import './index.scss'
 import { Link, NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faSearch, faTshirt, faBars, faClose, faUsers, faFlag } from '@fortawesome/free-solid-svg-icons'
-// import LogoPL from '../../assets/images/PL.webp'
+import Robot from '../../assets/images/Robot.png'
 // import LogoSubtitle from '../../assets/images/sub-logo.png'
 import { useState } from 'react'
 
@@ -11,8 +11,8 @@ const Sidebar = () => {
     return(
         <div className = 'nav-bar'> 
             <Link className = "logo" to="/"> 
-                {/* <img src = {LogoPL} alt="logo" />
-                <img className="sub-logo" src = {LogoSubtitle} alt="PremierZone" /> */}
+                <img src = {Robot} alt="logo" />
+                {/* <img className="sub-logo" src = {LogoSubtitle} alt="PremierZone" /> */}
             </Link>
             <nav className={showNav ? 'mobile-show' : ""}>
                 <NavLink exact="true" activeclassname = "active" to="/">

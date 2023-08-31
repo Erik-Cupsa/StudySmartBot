@@ -11,7 +11,7 @@
     }
     h1{
         color: #fff; 
-        font-size: 53px; 
+        font-size: 58px; 
         margin: 0; 
         font-weight: 400; 
         cursor: pointer;
@@ -38,19 +38,22 @@
             width: 200px; 
             opacity: 0; 
             height: auto; 
-            animation: rotateIn 1s linear both; 
-            animation-delay: 1.4s; 
+            animation: bounceIn;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
         }
     }
 
     h2 { 
         color: #ade8f4; 
         margin-top: 20px; 
-        font-weight: 500; 
-        font-size: 11px; 
+        font-weight: 400; 
+        font-size: 10px; 
         font-family: sans-serif; 
         letter-spacing: 3px; 
         animation: fadeIn 1s 1.8s backwards; 
+        line-height: 1.5;
     }
 
     .flat-button { 
@@ -73,7 +76,7 @@
     }
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1100px){
     .home-page{
         h1{
             font-size: 39px;
@@ -101,7 +104,11 @@
         .flat-button{
             float: none;
             display: block;
-            width: 125px;
+            width: 140px;
+        }
+        h2{
+            padding-right: 200px;
+            
         }
     }
 }

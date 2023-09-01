@@ -23,8 +23,8 @@
 
 .container.search-page,
 .container.position-page,
-.container.teams-page,
-.container.nation-page {
+.container.bot-page,
+.container.chat-page {
   .images-container {
     .image-box {
       animation: slideInFromBottom 2s forwards;
@@ -192,10 +192,10 @@
     height: auto; 
     min-height: auto;
 
-    &.teams-page, 
+    &.bot-page, 
     &.position-page, 
     &.search-page, 
-    &.nation-page{
+    &.chat-page{
       .text-zone{
         position: initial; 
         transform: none; 

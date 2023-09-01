@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faSearch, faTshirt, faBars, faClose, faUsers, faFlag } from '@fortawesome/free-solid-svg-icons'
 import Robot from '../../assets/images/Robot.png'
-// import LogoSubtitle from '../../assets/images/sub-logo.png'
+import LogoSubtitle from '../../assets/images/SubLogo.png'
 import { useState } from 'react'
 
 const Sidebar = () => {
@@ -12,16 +12,16 @@ const Sidebar = () => {
         <div className = 'nav-bar'> 
             <Link className = "logo" to="/"> 
                 <img src = {Robot} alt="logo" />
-                {/* <img className="sub-logo" src = {LogoSubtitle} alt="PremierZone" /> */}
+                <img className="sub-logo" src = {LogoSubtitle} alt="StudyBot" />
             </Link>
             <nav className={showNav ? 'mobile-show' : ""}>
                 <NavLink exact="true" activeclassname = "active" to="/">
                     <FontAwesomeIcon icon = {faHome}  onClick={() => setShowNav(false)} />
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "teams-link" to="/teams">
+                <NavLink exact="true" activeclassname = "active" className = "bot-link" to="/bot">
                     <FontAwesomeIcon icon = {faUsers} onClick={() => setShowNav(false)}/>
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "nation-link" to="/nation">
+                <NavLink exact="true" activeclassname = "active" className = "chat-link" to="/chat">
                     <FontAwesomeIcon icon = {faFlag} onClick={() => setShowNav(false)} />
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "position-link" to="/position">

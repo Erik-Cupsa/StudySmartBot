@@ -76,9 +76,9 @@
             }
         }
 
-        a.teams-link { 
+        a.bot-link { 
             &:after { 
-                content: "TEAMS";
+                content: "BOT";
             }
         }
 
@@ -93,9 +93,9 @@
                 content: "POSITION"; 
             }
         }
-        a.nation-link { 
+        a.chat-link { 
             &:after { 
-                content: "NATION"; 
+                content: "chat"; 
             }
         }
 

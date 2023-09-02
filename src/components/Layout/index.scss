@@ -22,7 +22,7 @@
 }
 
 .container.search-page,
-.container.position-page,
+.container.watch-page,
 .container.bot-page,
 .container.chat-page {
   .images-container {
@@ -173,7 +173,7 @@
   }
 }
 
-.container.search-page {
+.container.contact-page {
   .text-zone{
     .timeline-container{
       animation: slideInFromBottom 5s forwards;
@@ -193,8 +193,8 @@
     min-height: auto;
 
     &.bot-page, 
-    &.position-page, 
-    &.search-page, 
+    &.watch-page, 
+    &.contact-page, 
     &.chat-page{
       .text-zone{
         position: initial; 

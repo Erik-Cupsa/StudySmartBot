@@ -82,20 +82,20 @@
             }
         }
 
-        a.search-link { 
+        a.contact-link { 
             &:after { 
-                content: "SEARCH";
+                content: "CONTACT";
             }
         }
 
-        a.position-link { 
+        a.watch-link { 
             &:after { 
-                content: "POSITION"; 
+                content: "WATCH"; 
             }
         }
         a.chat-link { 
             &:after { 
-                content: "chat"; 
+                content: "CHAT"; 
             }
         }
 

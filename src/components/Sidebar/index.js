@@ -1,7 +1,8 @@
 import './index.scss'
 import { Link, NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faSearch, faTshirt, faBars, faClose, faUsers, faFlag } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faBars, faClose, faRobot, faComment, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import Robot from '../../assets/images/Robot.png'
 import LogoSubtitle from '../../assets/images/SubLogo.png'
 import { useState } from 'react'
@@ -19,16 +20,16 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon = {faHome}  onClick={() => setShowNav(false)} />
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "bot-link" to="/bot">
-                    <FontAwesomeIcon icon = {faUsers} onClick={() => setShowNav(false)}/>
+                    <FontAwesomeIcon icon = {faRobot} onClick={() => setShowNav(false)}/>
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "chat-link" to="/chat">
-                    <FontAwesomeIcon icon = {faFlag} onClick={() => setShowNav(false)} />
+                    <FontAwesomeIcon icon = {faComment} onClick={() => setShowNav(false)} />
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "position-link" to="/position">
-                    <FontAwesomeIcon icon = {faTshirt}  onClick={() => setShowNav(false)}/>
+                <NavLink exact="true" activeclassname = "active" className = "watch-link" to="/watch">
+                    <FontAwesomeIcon icon = {faYoutube}  onClick={() => setShowNav(false)}/>
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "search-link" to="/search">
-                    <FontAwesomeIcon icon = {faSearch} onClick={() => setShowNav(false)} />
+                <NavLink exact="true" activeclassname = "active" className = "contact-link" to="/contact">
+                    <FontAwesomeIcon icon = {faEnvelope} onClick={() => setShowNav(false)} />
                 </NavLink>
                 <FontAwesomeIcon icon = {faClose} size = "3x" className="close-icon" onClick={() => setShowNav(false)} />
             </nav>

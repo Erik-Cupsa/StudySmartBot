@@ -6,7 +6,7 @@ import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true); // State to control loader visibility
+  const [isLoading, setIsLoading] = useState(true); 
   const [letterClass, setLetterClass] = useState('text-animate');
   const nameArray = "Welcome to".split("");
   const jobArray = "Study Smart Bot!".split("");
@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     const timerId = setTimeout(() => {
       setLetterClass('text-animate-hover');
-      setIsLoading(false); // Hide the loader after the animation
+      setIsLoading(false); 
     }, 4000);
 
     return () => {

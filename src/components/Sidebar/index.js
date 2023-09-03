@@ -19,16 +19,16 @@ const Sidebar = () => {
                 <NavLink exact="true" activeclassname = "active" to="/">
                     <FontAwesomeIcon icon = {faHome}  onClick={() => setShowNav(false)} />
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "bot-link" to="/bot">
+                <NavLink exact="true" activeclassname = "active" className = "bot-link" to="/progress">
                     <FontAwesomeIcon icon = {faRobot} onClick={() => setShowNav(false)}/>
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "chat-link" to="/chat">
+                <NavLink exact="true" activeclassname = "active" className = "chat-link" to="/progress">
                     <FontAwesomeIcon icon = {faComment} onClick={() => setShowNav(false)} />
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "watch-link" to="/watch">
+                <NavLink exact="true" activeclassname = "active" className = "watch-link" to="/progress">
                     <FontAwesomeIcon icon = {faYoutube}  onClick={() => setShowNav(false)}/>
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "contact-link" to="/contact">
+                <NavLink exact="true" activeclassname = "active" className = "contact-link" to="/progress">
                     <FontAwesomeIcon icon = {faEnvelope} onClick={() => setShowNav(false)} />
                 </NavLink>
                 <FontAwesomeIcon icon = {faClose} size = "3x" className="close-icon" onClick={() => setShowNav(false)} />

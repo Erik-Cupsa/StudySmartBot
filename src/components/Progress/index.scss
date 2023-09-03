@@ -1,0 +1,114 @@
+.home-page{ 
+    .text-zone { 
+        position: absolute; 
+        align-content: center;
+        left: 10%; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        width: 40%; 
+        max-height: 90%; 
+        display: absolute;
+    }
+    h1{
+        color: #fff; 
+        font-size: 58px; 
+        margin: 0; 
+        font-weight: 400; 
+        cursor: pointer;
+
+        &::before { 
+            color: #4361ee; 
+            font-size: 18px; 
+            position: absolute; 
+            margin-top: -40px; 
+            left: 15px; 
+            opacity: 0.6; 
+        }
+
+        &::after { 
+            color: #4361ee; 
+            font-size: 18px; 
+            position: absolute; 
+            margin-top: 18px; 
+            left: 20px; 
+            animation: fadeIn 1s 1.7s backwards; 
+            opacity: 0.6; 
+        }
+        img { 
+            width: 200px; 
+            opacity: 0; 
+            height: auto; 
+            animation: bounceIn;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    h2 { 
+        color: #ade8f4; 
+        margin-top: 20px; 
+        font-weight: 400; 
+        font-size: 10px; 
+        font-family: sans-serif; 
+        letter-spacing: 3px; 
+        animation: fadeIn 1s 1.8s backwards; 
+        line-height: 1.5;
+    }
+
+    .flat-button { 
+        color: #4361ee; 
+        font-size: 15px; 
+        font-weight: 800;
+        letter-spacing: 4px;
+        text-decoration: none;
+        padding: 10px 18px; 
+        border: 2px solid #4361ee; 
+        margin-top: 25px; 
+        float: left; 
+        animation: fadeIn 1s 1.8s backwards; 
+        white-space: nowrap; 
+
+        &:hover { 
+            background: #4361ee; 
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .home-page{
+        h1{
+            font-size: 39px;
+        }
+    }
+}
+@media screen and (max-width: 1000px){
+    
+    .home-page{
+        h1{
+            font-size: 40px; 
+            justify-content: center;
+        }
+        .text-zone{
+            position: block;
+            width: 100%; 
+            transform: none;
+            padding: 10px;
+            box-sizing: border-box;
+            display: inline-block;
+            text-align: left;
+            padding-top: 100px;
+        }
+
+        .flat-button{
+            float: none;
+            display: block;
+            width: 140px;
+        }
+        h2{
+            padding-right: 200px;
+            
+        }
+    }
+}

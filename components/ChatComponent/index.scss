@@ -1,0 +1,83 @@
+/* Add your CSS styles to your component's stylesheet or a separate CSS file */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: transparent; /* Transparent background */
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .chat-history {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent; /* Transparent background for chat history */
+    margin-bottom: 10px;
+  }
+  
+  /* Style user messages as blue bubbles */
+  .user {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .chat-message.user {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 4px;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    /* Add a drop shadow to the chat bubbles for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style bot messages as purple bubbles */
+  .bot {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: 1px solid #8a2be2; /* Purple border */
+    border-radius: 4px;
+    background-color: #8a2be2; /* Purple background */
+    color: #fff; /* White text color */
+    /* Add a drop shadow to the chat bubbles for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .input-field {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,25 @@
+$primary-color: #9b5de5;
+
+@import 'animate.css'; 
+@import '~loaders.css/src/animations/pacman.scss';
+
+.loader-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+    animation: hideLoader 2s forwards; 
+    opacity: 1;
+    visibility: visible;
+  }
+  .pacman {
+    fill: #4361ee; 
+  }
+  
+  @keyframes hideLoader {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }

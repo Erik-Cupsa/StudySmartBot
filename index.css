@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  background: #161a1d;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #fff; 
+  border-radius: 5px;
+}

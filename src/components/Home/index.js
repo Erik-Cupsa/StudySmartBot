@@ -41,7 +41,7 @@ const Home = () => {
           <Link to="/teams" className="flat-button">GET STARTED</Link>
         </div>
       </div>
-            {isLoading ? (
+      {isLoading ? (
         <div className="loader-container">
           <Loader type="pacman"/>
         </div>

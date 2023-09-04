@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route index element={<Progress />} path = "/progress"/>
-          <Route index element={<ChatComponent />} path = "/chat"/>
+          <Route index element={<ChatComponent />} path = "/bot"/>
         </Route>
       </Routes>
     </>

@@ -1,15 +1,35 @@
 
 import "./index.scss"
-
-import React, { useState } from 'react';
+import Loader from 'react-loaders';
+import React, { useState, useEffect } from 'react';
 
 const ChatComponent = () => {
   const [userInput, setUserInput] = useState('');
   const [chatHistory, setChatHistory] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); 
+
+  useEffect(() => {
+    setChatHistory([
+      {
+        role: 'bot',
+        message: 'Welcome to the StudySmart Chat Bot!',
+      },
+      {
+        role: 'bot',
+        message: 'Ask anything that is on your mind.',
+      }, 
+    ]);
+    const loadingTimeout = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+  
+      return () => clearTimeout(loadingTimeout); 
+    }, []);
+
+  
 
   const handleSubmit = async () => {
     try {
-      // Send a POST request to your Express.js API
       const response = await fetch('http://localhost:3001/chat', {
         method: 'POST',
         headers: {
@@ -24,14 +44,12 @@ const ChatComponent = () => {
 
       const data = await response.json();
 
-      // Add the user's input followed by the bot's response to the chat history
       setChatHistory([
         ...chatHistory,
         { role: 'user', message: userInput },
         { role: 'bot', message: data.message },
       ]);
 
-      // Clear the user input field
       setUserInput('');
     } catch (error) {
       console.error('Error:', error);
@@ -39,32 +57,38 @@ const ChatComponent = () => {
   };
 
   return (
-    <div className="chat-container">
-      <div className="chat-history">
-        {chatHistory.map((message, index) => (
-          <div
-            key={index}
-            className={`chat-message ${message.role}`}
-          >
-            {message.message}
-          </div>
-        ))}
+    <>
+      <div className="chat-container" style={{ display: isLoading ? 'none' : 'block' }}>
+        <div className="chat-history">
+          {chatHistory.map((message, index) => (
+            <div
+              key={index}
+              className={`chat-message ${message.role}`}
+            >
+              {message.message}
+            </div>
+          ))}
+        </div>
+        <div className="chat-input">
+          <input
+            type="text"
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            placeholder="Type your message..."
+            className="input-field"
+          />
+          <button onClick={handleSubmit} className="send-button">
+            Send
+          </button>
+        </div>
       </div>
-      <div className="chat-input">
-        <input
-          type="text"
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          placeholder="Type your message..."
-          className="input-field"
-        />
-        <button onClick={handleSubmit} className="send-button">
-          Send
-        </button>
-      </div>
-    </div>
+      {isLoading ? (
+        <div className="loader-container">
+          <Loader type="pacman"/>
+        </div>
+      ) : null}
+    </>
   );
 };
 
 export default ChatComponent;
-

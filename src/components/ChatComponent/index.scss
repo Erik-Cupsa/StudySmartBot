@@ -1,25 +1,46 @@
-/* Add your CSS styles to your component's stylesheet or a separate CSS file */
-
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
 .chat-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: transparent; /* Transparent background */
+    justify-content: flex-start; 
+    max-height: calc(100vh - 200px); 
+    background-color: transparent;
     padding: 20px;
-    max-width: 400px;
+    max-width: 70%;
     margin: 0 auto;
+    margin-top: 110px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    font-size: 16px; 
+    animation: fadeIn 1s forwards;
+
+    &::-webkit-scrollbar {
+        width: 8px; 
+        background-color: transparent; 
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: white; 
+        border-radius: 4px; 
+      }
   }
   
   .chat-history {
     width: 100%;
     padding: 10px;
-    background-color: transparent; /* Transparent background for chat history */
+    background-color: transparent; 
     margin-bottom: 10px;
   }
   
-  /* Style user messages as blue bubbles */
   .user {
     display: flex;
     justify-content: flex-end;
@@ -28,15 +49,16 @@
   .chat-message.user {
     margin-bottom: 10px;
     padding: 5px 10px;
-    border: 1px solid #007bff; /* Blue border */
+    border: 2px solid #007bff;
     border-radius: 4px;
-    background-color: #007bff; /* Blue background */
-    color: #fff; /* White text color */
-    /* Add a drop shadow to the chat bubbles for depth */
+    background-color: #007bff; 
+    color: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    margin-left: auto;
+    max-width: 38%;
   }
   
-  /* Style bot messages as purple bubbles */
   .bot {
     display: flex;
     justify-content: flex-start;
@@ -44,13 +66,14 @@
   
   .chat-message {
     margin-bottom: 10px;
-    padding: 5px 10px;
-    border: 1px solid #8a2be2; /* Purple border */
-    border-radius: 4px;
-    background-color: #8a2be2; /* Purple background */
-    color: #fff; /* White text color */
-    /* Add a drop shadow to the chat bubbles for depth */
+    padding: 10px 15px;
+    border: 2px solid #8a2be2; 
+    border-radius: 8px;
+    background-color: #8a2be2;
+    color: #fff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    word-wrap: break-word; 
   }
   
   .chat-input {

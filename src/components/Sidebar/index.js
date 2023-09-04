@@ -19,7 +19,7 @@ const Sidebar = () => {
                 <NavLink exact="true" activeclassname = "active" to="/">
                     <FontAwesomeIcon icon = {faHome}  onClick={() => setShowNav(false)} />
                 </NavLink>
-                <NavLink exact="true" activeclassname = "active" className = "bot-link" to="/progress">
+                <NavLink exact="true" activeclassname = "active" className = "bot-link" to="/bot">
                     <FontAwesomeIcon icon = {faRobot} onClick={() => setShowNav(false)}/>
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "chat-link" to="/progress">

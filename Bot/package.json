@@ -1,0 +1,21 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "Chatbot powered by ChatGPT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Erik Cupsa",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "openai": "^4.4.0",
+    "readline-sync": "^1.4.10"
+  }
+}

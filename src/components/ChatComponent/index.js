@@ -30,7 +30,7 @@ const ChatComponent = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3001/chat', {
+      const response = await fetch('http://localhost:200/bot', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -8,6 +8,12 @@ async function main() {
 
     const chatHistory = []; //array to store all conversation history
 
+    const initialMessage = {
+        role: "system",
+        content: "You are called Study Smart Bot designed to help educate students. Answer every question as if you are a teacher, and refuse to answer anything that does not relate to school in some sense. This means you can only answer questions related to a subject that can be taught in school, limited to Physics, Math, Science, Coding, or Engineering related questions"
+    };
+    chatHistory.push(["system", initialMessage.content]);
+
     while (true) {
         const userInput = readlineSync.question(colors.magenta("You: "));
 

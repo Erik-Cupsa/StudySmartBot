@@ -10,7 +10,7 @@ import bodyParser from 'body-parser';
 
 
 const app = express();
-const port = 80; 
+const port = 200; 
 
 // Middleware for parsing JSON requests
 app.use(bodyParser.json());
@@ -18,6 +18,12 @@ app.use(cors());
 
 // Create an array to store all conversation history
 const chatHistory = [];
+
+const initialMessage = {
+  role: "system",
+  content: "You are called Study Smart Bot designed to help educate students. Answer every question as if you are a teacher, and refuse to answer anything that does not relate to school in some sense. This means you can only answer questions related to a subject that can be taught in school, limited to Physics, Math, Science, Coding, or Engineering related questions"
+};
+chatHistory.push(["system", initialMessage.content]);
 
 app.post('/bot', async (req, res) => {
     const userInput = req.body.userInput;
